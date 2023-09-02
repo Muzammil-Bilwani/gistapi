@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Octicon from "octicons-react-ts"
+import { SearchIcon } from "@primer/octicons-react"
 
 const Search = () => {
   return (
     <Wrapper>
       <InputBox>
-        <Octicon name="search" />
+        <SearchIcon />
         <Input placeholder="Search Gists for the username" />
       </InputBox>
     </Wrapper>

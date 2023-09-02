@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/rest"
 import { FC } from "react"
-import Octicon from "octicons-react-ts"
 import { State } from "../../constants/Messages"
+import { AlertIcon, InboxIcon } from "@primer/octicons-react"
 
 type MessageProps = {
   message: string
@@ -9,14 +9,14 @@ type MessageProps = {
 }
 
 const ICON_MAP = {
-  [State.ERROR]: "alert",
-  [State.NODATA]: "info"
+  [State.ERROR]: <AlertIcon />,
+  [State.NODATA]: <InboxIcon />
 }
 
 const Message: FC<MessageProps> = ({ message, state }) => {
   return (
     <div className="message">
-      <Octicon name={ICON_MAP[state]} />
+      {ICON_MAP[state]}
       <p>{message}</p>
     </div>
   )

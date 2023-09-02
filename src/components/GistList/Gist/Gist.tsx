@@ -3,7 +3,13 @@ import { FC } from "react"
 import "./gist.css"
 import LabelIcon from "../../common/LabelIcon/LabelIcon"
 import { formatDate } from "../../../services/helper"
-
+import {
+  CodeIcon,
+  RepoForkedIcon,
+  CommentIcon,
+  StarIcon,
+  FileIcon
+} from "@primer/octicons-react"
 type GistProps = {
   gist: any
 }
@@ -19,18 +25,18 @@ const Gist: FC<GistProps> = ({ gist }) => {
           <p className="username">{gist.owner.login}</p>
         </div>
         <div className="links">
-          <LabelIcon iconName="code" label={`${fileCount} Files`} />
+          <LabelIcon icon={<CodeIcon />} label={`${fileCount} Files`} />
           <LabelIcon
             url={gist.forks_url}
-            iconName="repo-forked"
+            icon={<RepoForkedIcon />}
             label="Forks"
           />
           <LabelIcon
             url={gist.comments_url}
-            iconName="comment"
+            icon={<CommentIcon />}
             label={`${gist.comments} Comments`}
           />
-          <LabelIcon url={gist.starUrl} iconName="star" label="Stars" />
+          <LabelIcon url={gist.starUrl} icon={<StarIcon />} label="Stars" />
         </div>
       </div>
       <div>
@@ -47,7 +53,7 @@ const Gist: FC<GistProps> = ({ gist }) => {
           <LabelIcon
             key={file}
             url={file.raw_url}
-            iconName="file"
+            icon={<FileIcon />}
             label={file}
           />
         ))}

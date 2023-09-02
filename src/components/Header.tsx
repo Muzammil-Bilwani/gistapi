@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Octicon from "octicons-react-ts"
 import Search from "./Search"
+import { MarkGithubIcon } from "@primer/octicons-react"
 
 function Header() {
   return (
     <Wrapper>
-      <Octicon name="mark-github" mega />
+      <MarkGithubIcon size={"medium"} />
       <Search />
     </Wrapper>
   )

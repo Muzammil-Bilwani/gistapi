@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "@octokit/rest": "^20.0.1",
+    "@primer/octicons-react": "^19.7.0",
     "dayjs": "^1.11.9",
-    "octicons-react-ts": "^1.81.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-query": "^3.39.3",

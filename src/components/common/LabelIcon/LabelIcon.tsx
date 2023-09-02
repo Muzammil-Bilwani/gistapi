@@ -1,18 +1,17 @@
-import { FC } from "react"
-import Octicon from "octicons-react-ts"
+import { FC, ReactNode } from "react"
 
 import "./labelIcon.css"
 
 type LabelIconProps = {
   label: string
-  iconName: string
+  icon: ReactNode
   url?: string
 }
 
-const LabelIcon: FC<LabelIconProps> = ({ label, iconName, url }) => {
+const LabelIcon: FC<LabelIconProps> = ({ label, icon, url }) => {
   return (
     <a href={url} target="__blank" className="labelIcon">
-      <Octicon class={["icon"]} name={iconName} />
+      {icon}
       <span>{label}</span>
     </a>
   )
