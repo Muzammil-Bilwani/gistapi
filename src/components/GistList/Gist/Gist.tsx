@@ -8,8 +8,8 @@ import {
   CodeIcon,
   RepoForkedIcon,
   CommentIcon,
-  StarIcon,
-  FileIcon
+  FileIcon,
+  StarFillIcon
 } from "@primer/octicons-react"
 
 type GistProps = {
@@ -39,7 +39,7 @@ const Gist: FC<GistProps> = ({ gist }) => {
             icon={<CommentIcon />}
             label={`${gist.comments} Comments`}
           />
-          <LabelIcon url={gist.starUrl} icon={<StarIcon />} label="Stars" />
+          <LabelIcon url={gist.starUrl} icon={<StarFillIcon />} label="Stars" />
         </div>
       </div>
       <div>
