@@ -2,6 +2,7 @@ import { Octokit } from "@octokit/rest"
 import { FC } from "react"
 import { State } from "../../constants/Messages"
 import { AlertIcon, InboxIcon } from "@primer/octicons-react"
+import "./message.css"
 
 type MessageProps = {
   message: string

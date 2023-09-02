@@ -1,13 +1,33 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import { SearchIcon } from "@primer/octicons-react"
+import "./search.css"
+import { debounce } from "../services/helper"
+import GistContext from "../context/GistContext"
+import { GistContextValue } from "../context/GistProvider"
 
 const Search = () => {
+  const { onChange } = useContext(GistContext) as GistContextValue
+  const [, setSearchValue] = useState("")
+
+  const handleChange = ({
+    target: { value }
+  }: {
+    target: { value: string }
+  }) => {
+    setSearchValue(value)
+    debounce(() => onChange(value))
+  }
+
   return (
     <Wrapper>
       <InputBox>
-        <SearchIcon />
-        <Input placeholder="Search Gists for the username" />
+        <SearchIcon className="searchIcon" />
+        <Input
+          // value={searchValue}
+          onChange={handleChange}
+          placeholder="Search Gists for the username"
+        />
       </InputBox>
     </Wrapper>
   )
@@ -32,7 +52,7 @@ const Input = styled.input`
   border: none;
   width: 100%;
   font-size: 16px;
-
+  margin-left: 8px;
   &:focus {
     outline: 0;
   }

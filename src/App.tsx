@@ -1,8 +1,10 @@
+import React from "react"
 import styled from "styled-components"
 import Header from "./components/Header"
 import GlobalStyles from "./GlobalStyle"
 import { QueryClient, QueryClientProvider } from "react-query"
 import GistList from "./components/GistList/GistList"
+import { GistContainer } from "./context/GistProvider"
 
 const App = () => {
   const queryClient = new QueryClient()
@@ -10,9 +12,11 @@ const App = () => {
   return (
     <Wrapper className="App" data-testid="app">
       <QueryClientProvider client={queryClient}>
-        <Header />
-        <GlobalStyles />
-        <GistList />
+        <GistContainer>
+          <Header />
+          <GlobalStyles />
+          <GistList />
+        </GistContainer>
       </QueryClientProvider>
     </Wrapper>
   )
