@@ -1,0 +1,52 @@
+.gist {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.userInfo {
+    color: #0365D6
+}
+
+.dates {
+    font-size: 16px;
+    margin: 0;
+}
+
+.files {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.desc {
+    word-wrap: break-word;
+}

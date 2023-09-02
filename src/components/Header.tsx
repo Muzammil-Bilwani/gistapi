@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import Octicon from 'react-octicon'
-import Search from './Search';
+import React from "react"
+import styled from "styled-components"
+import Octicon from "octicons-react-ts"
+import Search from "./Search"
 
 function Header() {
   return (
     <Wrapper>
-      <Octicon name="mark-github" mega/>
+      <Octicon name="mark-github" mega />
       <Search />
     </Wrapper>
   )
@@ -21,6 +21,6 @@ const Wrapper = styled.div`
   line-height: 1.5;
   display: flex;
   align-items: center;
-`;
+`
 
 export default Header

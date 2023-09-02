@@ -1,0 +1,20 @@
+.icon {
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #0365D6
+}
+
+.labelIcon {
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.labelIcon span {
+    color: #0365D6;
+    white-space: nowrap;
+}
