@@ -8,7 +8,7 @@ import { GistContextValue } from "../context/GistProvider"
 
 const Search = () => {
   const { onChange } = useContext(GistContext) as GistContextValue
-  const [, setSearchValue] = useState("")
+  const [searchValue, setSearchValue] = useState("")
 
   const handleChange = ({
     target: { value }
@@ -24,7 +24,7 @@ const Search = () => {
       <InputBox>
         <SearchIcon className="searchIcon" />
         <Input
-          // value={searchValue}
+          value={searchValue}
           onChange={handleChange}
           placeholder="Search Gists for the username"
         />

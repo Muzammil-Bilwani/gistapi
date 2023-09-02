@@ -1,4 +1,5 @@
-import { FC } from "react"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { FC } from "react"
 
 import "./gist.css"
 import LabelIcon from "../../common/LabelIcon/LabelIcon"
@@ -10,7 +11,9 @@ import {
   StarIcon,
   FileIcon
 } from "@primer/octicons-react"
+
 type GistProps = {
+  // Using any here, because octokit is not typed
   gist: any
 }
 
